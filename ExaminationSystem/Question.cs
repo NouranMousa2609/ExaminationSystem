@@ -38,7 +38,7 @@ namespace ExaminationSystem
         public static double ShowQuestion(Question Q)
         {
 
-            Console.WriteLine(Q.QuestionHeader);
+            Console.WriteLine($"{Q.QuestionHeader}\t ({Q.Mark} Marks)");
             Console.WriteLine(Q.QuestionBody);
             Console.WriteLine();
             for (int i = 0; i < Q.AnswerList.Length; i++)
