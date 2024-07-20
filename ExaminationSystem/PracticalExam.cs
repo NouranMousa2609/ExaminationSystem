@@ -51,6 +51,8 @@ namespace ExaminationSystem
 
             for (int i = 0; i < this.NumberOfQuestions; i++)
             {
+
+                Console.Write($"Q{i + 1})");
                 Question.ShowQuestion(this.Mcq[i]);
 
 
@@ -59,6 +61,7 @@ namespace ExaminationSystem
             Console.WriteLine("Correct answers for the practical Exam");
             for (int i = 0; i < this.NumberOfQuestions; i++)
             {
+                Console.Write($"Q{i+1})");
                 Question.PrintCorrectAnswers(this.Mcq[i]);
 
 

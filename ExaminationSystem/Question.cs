@@ -69,7 +69,7 @@ namespace ExaminationSystem
         }
         public static void PrintQuestiondWithCorrectAnswers(Question Q)
         {
-            Console.WriteLine(Q.QuestionBody);
+            Console.Write($"{Q.QuestionBody}\t :");
             Console.WriteLine($"Correct Answer is {Q.AnswerList[Q.CorrectAnswer - 1]}");
 
 
