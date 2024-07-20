@@ -18,7 +18,7 @@ namespace ExaminationSystem
                 Console.Clear();
                 Stopwatch SW = new Stopwatch();
                 SW.Start();
-                Sub1.Exam.ShowExam();
+                Sub1?.Exam?.ShowExam();
                 Console.WriteLine($"The Elapsed Time = {SW.Elapsed}");
             }
         }

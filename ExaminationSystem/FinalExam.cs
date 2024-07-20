@@ -9,7 +9,7 @@ namespace ExaminationSystem
     internal class FinalExam : Exam
     {
 
-        public Question[]? Questions { get; set; }
+        public Question[] Questions { get; set; }
 
         public FinalExam(uint ExamTime, uint NumberOfQuestions, Question[] Questions) : base(ExamTime, NumberOfQuestions)
         {

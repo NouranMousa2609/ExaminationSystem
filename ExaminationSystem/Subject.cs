@@ -14,7 +14,7 @@ namespace ExaminationSystem
 
         public string SubjectName { get; set; }
 
-        public Exam Exam { get; set; }
+        public Exam? Exam { get; set; }
 
         public Subject(int SubjectId, string SubjectName)
         {

@@ -51,7 +51,7 @@ namespace ExaminationSystem
             do
             {
                 Console.WriteLine("enter number of the answer");
-            } while (!int.TryParse(Console.ReadLine(), out numA));
+            } while (!int.TryParse(Console.ReadLine(), out numA)||(numA<1||numA>3));
             Console.Clear();
             if (numA == Q.CorrectAnswer)
             {
