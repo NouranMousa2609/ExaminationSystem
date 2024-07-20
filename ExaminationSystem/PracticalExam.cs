@@ -35,11 +35,11 @@ namespace ExaminationSystem
             }
             while (!uint.TryParse(Console.ReadLine(), out num)||num==0);
 
-            MCQQuestion[] qs = new MCQQuestion[num];
+            Question[] qs = new Question[num];
             for (int i = 0; i < qs.Length; i++)
             {
                 MCQQuestion mCQQuestion = new MCQQuestion();
-                qs[i] = (MCQQuestion)mCQQuestion.CreatQuestion();
+                qs[i] = mCQQuestion.CreatQuestion();
 
             }
             Console.Clear();
