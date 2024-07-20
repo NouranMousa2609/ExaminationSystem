@@ -8,10 +8,10 @@ namespace ExaminationSystem
 {
     internal class PracticalExam : Exam
     {
-        public MCQQuestion[] Mcq { get; set; }
-        public PracticalExam(uint ExamTime, uint NumberOfQuestions, MCQQuestion[] Mcq) : base(ExamTime, NumberOfQuestions)
+        
+        public PracticalExam(uint ExamTime, uint NumberOfQuestions, Question[] Questions) : base(ExamTime, NumberOfQuestions,Questions)
         {
-            this.Mcq = Mcq;
+           
 
         }
         public PracticalExam()
@@ -53,7 +53,7 @@ namespace ExaminationSystem
             {
 
                 Console.Write($"Q{i + 1})");
-                Question.ShowQuestion(this.Mcq[i]);
+                Question.ShowQuestion(this.Questions[i]);
 
 
             }
@@ -62,7 +62,7 @@ namespace ExaminationSystem
             for (int i = 0; i < this.NumberOfQuestions; i++)
             {
                 Console.Write($"Q{i+1})");
-                Question.PrintCorrectAnswers(this.Mcq[i]);
+                Question.PrintCorrectAnswers(this.Questions[i]);
 
 
             }

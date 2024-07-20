@@ -11,12 +11,13 @@ namespace ExaminationSystem
 
         public uint ExamTime { get; set; }
         public uint NumberOfQuestions { get; set; }
+        public Question[] Questions { get; set; }
 
-        protected Exam(uint ExamTime, uint NumberOfQuestions)
+        protected Exam(uint ExamTime, uint NumberOfQuestions, Question[] questions)
         {
             this.ExamTime = ExamTime;
             this.NumberOfQuestions = NumberOfQuestions;
-
+            Questions = questions;
         }
         protected Exam()
         {
