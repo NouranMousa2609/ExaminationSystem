@@ -1,4 +1,6 @@
-﻿namespace ExaminationSystem
+﻿using System.Diagnostics;
+
+namespace ExaminationSystem
 {
     internal class Program
     {
@@ -6,7 +8,7 @@
         {
             Subject Sub1 = new Subject(10, "c#");
             Sub1.CreateExam();
-
+            
         }
     }
 }

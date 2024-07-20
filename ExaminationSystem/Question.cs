@@ -35,7 +35,46 @@ namespace ExaminationSystem
 
         public abstract Question CreatQuestion();
 
-        
+        public static double ShowQuestion(Question Q)
+        {
+
+            Console.WriteLine(Q.QuestionHeader);
+            Console.WriteLine(Q.QuestionBody);
+            Console.WriteLine();
+            for (int i = 0; i < Q.AnswerList.Length; i++)
+            {
+                Console.WriteLine(Q.AnswerList[i]);
+
+            }
+            Console.WriteLine("____________________________________");
+            int numA;
+            do
+            {
+                Console.WriteLine("enter number of the answer");
+            } while (!int.TryParse(Console.ReadLine(), out numA));
+            Console.Clear();
+            if (numA == Q.CorrectAnswer)
+            {
+                return Q.Mark;
+            }
+            else return 0;
+
+        }
+
+        public static void PrintCorrectAnswers(Question Q)
+        {
+            Console.WriteLine(Q.AnswerList[Q.CorrectAnswer - 1]);
+
+
+        }
+        public static void PrintQuestiondWithCorrectAnswers(Question Q)
+        {
+            Console.WriteLine(Q.QuestionBody);
+            Console.WriteLine($"Correct Answer is {Q.AnswerList[Q.CorrectAnswer - 1]}");
+
+
+        }
+
     }
 
 }

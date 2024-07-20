@@ -66,5 +66,43 @@ namespace ExaminationSystem
             return new FinalExam(time, num, qs);
 
         }
+        private protected double CalculateExamGrade()
+        {
+            {
+                double FinalGrade = 0;
+                if (Questions is not null)
+                {
+                    for (int i = 0; i < Questions.Length; i++)
+                    {
+                        FinalGrade += Questions[i]?.Mark ?? 0;
+                    }
+                    return FinalGrade;
+                }
+                return FinalGrade;
+            }
+
+        }
+        public override void ShowExam()
+        {
+
+            double TotalMark = 0;
+            for (int i = 0; i < this.NumberOfQuestions; i++)
+            {
+                TotalMark += Question.ShowQuestion(this.Questions[i]);
+
+
+            }
+
+            Console.Clear();
+            for (int i = 0; i < this.NumberOfQuestions; i++)
+            {
+                Question.PrintQuestiondWithCorrectAnswers(this.Questions[i]);
+
+
+            }
+            Console.WriteLine($"\nyour Grade in the Final Exam is {TotalMark} from {CalculateExamGrade()}");
+
+
+        }
     }
 }

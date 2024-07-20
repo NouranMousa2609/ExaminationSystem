@@ -23,6 +23,6 @@ namespace ExaminationSystem
 
         }
         public abstract Exam CreateExam();
-
+        public abstract void ShowExam();
     }
 }

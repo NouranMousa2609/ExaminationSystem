@@ -45,9 +45,28 @@ namespace ExaminationSystem
             Console.Clear();
             return new PracticalExam(time, num, qs);
 
+        }
+        public override void ShowExam()
+        {
+
+            for (int i = 0; i < this.NumberOfQuestions; i++)
+            {
+                Question.ShowQuestion(this.Mcq[i]);
+
+
+            }
+            Console.Clear();
+            Console.WriteLine("Correct answers for the practical Exam");
+            for (int i = 0; i < this.NumberOfQuestions; i++)
+            {
+                Question.PrintCorrectAnswers(this.Mcq[i]);
+
+
+            }
 
 
         }
-
     }
-}   
+
+
+}
