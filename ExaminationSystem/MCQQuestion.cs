@@ -8,7 +8,7 @@ namespace ExaminationSystem
 {
     internal class MCQQuestion : Question
     {
-        public MCQQuestion(string questionHeader, string questionBody, double mark) : base(questionHeader, questionBody, mark)
+        public MCQQuestion(string questionHeader, string questionBody, double mark, Answer[] answerList, int correctAnswerIndex) : base(questionHeader, questionBody, mark, answerList, correctAnswerIndex)
         {
 
         }

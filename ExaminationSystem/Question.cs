@@ -16,18 +16,23 @@ namespace ExaminationSystem
 
        public Double Mark { get; set; }
 
+        public Answer[] AnswerList { get; set; }
 
-       protected Question()
-       {
+        public int CorrectAnswer { get; set; }
 
-       }
-       protected Question(string questionHeader, string questionBody, double mark)
-       {
-           QuestionHeader = questionHeader;
-           QuestionBody = questionBody;
-           Mark = mark;
+        protected Question()
+        {
 
-       }
-   }
- 
+        }
+        protected Question(string questionHeader, string questionBody, double mark, Answer[] answerList, int correctAnswer)
+        {
+            QuestionHeader = questionHeader;
+            QuestionBody = questionBody;
+            Mark = mark;
+            AnswerList = answerList;
+            CorrectAnswer = correctAnswer;
+        }
+
+    }
+
 }

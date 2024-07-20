@@ -8,7 +8,7 @@ namespace ExaminationSystem
 {
     internal class TrueOrFalseQuestion : Question
     {
-        public TrueOrFalseQuestion(string questionHeader, string questionBody, double mark) : base(questionHeader, questionBody, mark)
+        public TrueOrFalseQuestion(string questionHeader, string questionBody, double mark, Answer[] answerList, int correctAnswer) : base(questionHeader, questionBody, mark, answerList, correctAnswer)
         {
 
         }
