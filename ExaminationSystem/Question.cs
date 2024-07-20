@@ -33,6 +33,9 @@ namespace ExaminationSystem
             CorrectAnswer = correctAnswer;
         }
 
+        public abstract Question CreatQuestion();
+
+        
     }
 
 }

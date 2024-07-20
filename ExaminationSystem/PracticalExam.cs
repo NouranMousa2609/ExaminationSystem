@@ -18,6 +18,36 @@ namespace ExaminationSystem
         {
 
         }
+        public override Exam CreateExam()
+        {
+
+            uint time;
+            do
+            {
+                Console.WriteLine("Enter time in Minutes");
+            }
+            while (!uint.TryParse(Console.ReadLine(), out time));
+
+            uint num;
+            do
+            {
+                Console.WriteLine("Enter number of Questions");
+            }
+            while (!uint.TryParse(Console.ReadLine(), out num));
+
+            MCQQuestion[] qs = new MCQQuestion[num];
+            for (int i = 0; i < qs.Length; i++)
+            {
+                MCQQuestion mCQQuestion = new MCQQuestion();
+                qs[i] = (MCQQuestion)mCQQuestion.CreatQuestion();
+
+            }
+            Console.Clear();
+            return new PracticalExam(time, num, qs);
+
+
+
+        }
 
     }
 }   

@@ -22,7 +22,7 @@ namespace ExaminationSystem
         {
 
         }
-       
+        public abstract Exam CreateExam();
 
     }
 }
