@@ -28,14 +28,14 @@ namespace ExaminationSystem
             {
                 Console.WriteLine("Enter time in Minutes");
             }
-            while (!uint.TryParse(Console.ReadLine(), out time));
+            while (!uint.TryParse(Console.ReadLine(), out time)||time==0);
 
             uint num;
             do
             {
                 Console.WriteLine("Enter number of Questions");
             }
-            while (!uint.TryParse(Console.ReadLine(), out num));
+            while (!uint.TryParse(Console.ReadLine(), out num)||num==0);
 
             Question[] qs = new Question[num];
             for (int i = 0; i < qs.Length; i++)

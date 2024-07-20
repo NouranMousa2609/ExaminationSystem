@@ -28,7 +28,7 @@ namespace ExaminationSystem
             uint X;
             do
             {
-                Console.WriteLine("Choose type of the Question (1-Final Exam , 2-Practical Exam)");
+                Console.WriteLine("Choose type of the Exam (1-Final Exam , 2-Practical Exam)");
             }
             while (!uint.TryParse(Console.ReadLine(), out X) || (X < 1 || X > 2));
             if (X == 1)

@@ -28,7 +28,7 @@ namespace ExaminationSystem
             {
                 Console.WriteLine("Enter the Mark of the Question");
             }
-            while (!double.TryParse(Console.ReadLine(), out Mark) || Mark < 0);
+            while (!double.TryParse(Console.ReadLine(), out Mark) || Mark <= 0);
 
             string? questionbody;
             do
@@ -58,7 +58,7 @@ namespace ExaminationSystem
             {
                 Console.WriteLine("Enter the Correct Answer");
             }
-            while (!int.TryParse(Console.ReadLine(), out num));
+            while (!int.TryParse(Console.ReadLine(), out num)||(num<1||num>3));
 
             Console.Clear();
             return new MCQQuestion("Select the Correct Answer", questionbody, Mark, answers, num);

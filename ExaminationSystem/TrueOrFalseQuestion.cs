@@ -28,7 +28,7 @@ namespace ExaminationSystem
             {
                 Console.WriteLine("Enter the Mark of the Question");
             }
-            while (!double.TryParse(Console.ReadLine(), out Mark) || Mark < 0);
+            while (!double.TryParse(Console.ReadLine(), out Mark) || Mark <= 0);
 
             string? questionbody;
             do
