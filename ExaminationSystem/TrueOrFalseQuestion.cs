@@ -36,7 +36,7 @@ namespace ExaminationSystem
                 Console.WriteLine("Enter the body of the Question");
                 questionbody = Console.ReadLine();
             }
-            while (string.IsNullOrEmpty(questionbody));
+            while (string.IsNullOrEmpty(questionbody) || string.IsNullOrWhiteSpace(questionbody));
 
 
             int num;

@@ -35,7 +35,7 @@ namespace ExaminationSystem
             {
                 Console.WriteLine("Enter the body of the Question");
                 questionbody = Console.ReadLine();
-            } while (string.IsNullOrEmpty(questionbody));
+            } while (string.IsNullOrEmpty(questionbody) || string.IsNullOrWhiteSpace(questionbody));
 
 
 
@@ -48,7 +48,7 @@ namespace ExaminationSystem
                     Console.Write($"Enter Answer {i + 1}:");
                     answertext = Console.ReadLine();
                 }
-                while (string.IsNullOrEmpty(answertext));
+                while (string.IsNullOrEmpty(answertext)||string.IsNullOrWhiteSpace(answertext));
                 answers[i] = new Answer(i + 1, answertext);
 
 
