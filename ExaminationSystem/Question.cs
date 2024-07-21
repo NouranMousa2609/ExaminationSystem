@@ -20,6 +20,8 @@ namespace ExaminationSystem
 
         public int CorrectAnswer { get; set; }
 
+        protected int StudentAnswer { get; set; } = default;
+
         protected Question()
         {
 
@@ -52,6 +54,7 @@ namespace ExaminationSystem
             {
                 Console.WriteLine("enter number of the answer");
             } while (!int.TryParse(Console.ReadLine(), out numA)||(numA<1||numA>3));
+            Q.StudentAnswer = numA;
             Console.Clear();
             if (numA == Q.CorrectAnswer)
             {
@@ -70,7 +73,7 @@ namespace ExaminationSystem
         public static void PrintQuestiondWithCorrectAnswers(Question Q)
         {
             Console.Write($"{Q.QuestionBody} :");
-            Console.WriteLine($"Correct Answer is {Q.AnswerList[Q.CorrectAnswer - 1]}");
+            Console.WriteLine($"Your Answer is {Q.AnswerList[Q.StudentAnswer-1]}");
 
 
         }
