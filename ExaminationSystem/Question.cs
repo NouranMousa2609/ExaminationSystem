@@ -70,7 +70,7 @@ namespace ExaminationSystem
 
 
         }
-        public static void PrintQuestiondWithCorrectAnswers(Question Q)
+        public static void PrintQuestiondWithStudentAnswer(Question Q)
         {
             Console.Write($"{Q.QuestionBody} :");
             Console.WriteLine($"Your Answer is {Q.AnswerList[Q.StudentAnswer-1]}");

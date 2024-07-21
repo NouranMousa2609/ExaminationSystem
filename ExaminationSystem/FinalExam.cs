@@ -97,7 +97,7 @@ namespace ExaminationSystem
             for (int i = 0; i < this.NumberOfQuestions; i++)
             {
                 Console.Write($"Q{i + 1})");
-                Question.PrintQuestiondWithCorrectAnswers(this.Questions[i]);
+                Question.PrintQuestiondWithStudentAnswer(this.Questions[i]);
 
 
             }
