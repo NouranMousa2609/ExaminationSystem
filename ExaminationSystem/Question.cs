@@ -37,7 +37,7 @@ namespace ExaminationSystem
 
         public abstract Question CreatQuestion();
 
-        public static double ShowQuestion(Question Q)
+        public static  double ShowQuestion(Question Q)
         {
 
             Console.WriteLine($"{Q.QuestionHeader}\t ({Q.Mark} Marks)");
@@ -53,7 +53,7 @@ namespace ExaminationSystem
             do
             {
                 Console.WriteLine("enter number of the answer");
-            } while (!int.TryParse(Console.ReadLine(), out numA)||(numA<1||numA>3));
+            } while (!int.TryParse(Console.ReadLine(), out numA)||(numA<1||numA>Q.AnswerList.Length));
             Q.StudentAnswer = numA;
             Console.Clear();
             if (numA == Q.CorrectAnswer)
